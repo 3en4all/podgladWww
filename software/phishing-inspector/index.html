@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Phishing Inspector // TechM8</title>
+    <meta name="description" content="Phishing Inspector — standalone Windows x64 tool for inspecting suspicious emails, URLs and related content. Public beta v0.2.0-beta available in Polish and English.">
+    <link rel="canonical" href="https://3en4all.github.io/software/phishing-inspector/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config={darkMode:'class',theme:{extend:{colors:{brand:{dark:'#0a0f1d',card:'#111827',emerald:'#10b981',cyan:'#00b4d8',border:'#1f2937'}},fontFamily:{mono:['JetBrains Mono','monospace']}}}};
+    </script>
+    <style>[data-lang]{display:none} html[data-language="pl"] [data-lang="pl"],html[data-language="en"] [data-lang="en"]{display:revert}</style>
+</head>
+<body class="bg-[#0a0f1d] text-gray-200 font-mono min-h-screen selection:bg-emerald-500 selection:text-black">
+<header class="border-b border-[#30363d] bg-[#0a0f1d]/95 backdrop-blur sticky top-0 z-20">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+<a href="/podgladWww/" class="text-xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">TechM8<span class="text-emerald-500">//</span></a>
+<div class="flex items-center gap-2">
+<div class="flex items-center rounded-lg border border-[#30363d] bg-[#0d1117] p-0.5 text-[10px] tracking-[0.12em]">
+<button id="lang-pl" onclick="setLanguage('pl')" class="px-2 py-1 rounded-md">PL</button><span class="text-gray-700">/</span><button id="lang-en" onclick="setLanguage('en')" class="px-2 py-1 rounded-md">EN</button>
+</div>
+<a href="https://github.com/3en4all/PhishingInspector" class="text-xs px-3 py-1.5 rounded-lg border border-[#30363d] hover:border-cyan-400/50 text-cyan-300">GitHub</a>
+</div></div></header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+<section class="grid lg:grid-cols-[1.2fr_.8fr] gap-8 items-start">
+<div>
+<div class="flex flex-wrap gap-2 mb-5">
+<span class="text-[10px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-300"><span data-lang="pl">Publiczna beta</span><span data-lang="en">Public Beta</span></span>
+<span class="text-[10px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300">Windows x64</span>
+<span class="text-[10px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-300">PL / EN</span>
+<span class="text-[10px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full border border-gray-700 text-gray-400">v0.2.0-beta</span>
+</div>
+<h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight">Phishing Inspector</h1>
+<p data-lang="pl" class="mt-4 text-lg text-gray-300 max-w-3xl">Samodzielne narzędzie dla Windows do sprawdzania podejrzanych wiadomości e-mail, adresów URL i powiązanej zawartości zanim uznasz je za bezpieczne.</p>
+<p data-lang="en" class="mt-4 text-lg text-gray-300 max-w-3xl">A standalone Windows utility for inspecting suspicious emails, URLs and related content before you trust them.</p>
+<p data-lang="pl" class="mt-4 text-sm text-gray-400 max-w-3xl">Publiczna beta jest teraz dostępna w osobnych wersjach polskiej i angielskiej. Analiza działa lokalnie i nie wymaga osobnej instalacji Pythona.</p>
+<p data-lang="en" class="mt-4 text-sm text-gray-400 max-w-3xl">The public beta is now available as separate Polish and English builds. Analysis runs locally and no separate Python installation is required.</p>
+<p data-lang="pl" class="mt-3 text-xs text-amber-300/90 max-w-3xl">Wkrótce: v0.3.0 z nowym ciemnym interfejsem (karta wyniku, kafelki metryk, okno O programie) i wydanie w Microsoft Store. Do tego czasu aktualną wersją jest v0.2.0-beta poniżej.</p>
+<p data-lang="en" class="mt-3 text-xs text-amber-300/90 max-w-3xl">Coming soon: v0.3.0 with a new dark interface (result card, metric tiles, About window) and a Microsoft Store release. Until then, v0.2.0-beta below is the current version.</p>
+<div class="mt-7 flex flex-wrap gap-3">
+<a data-lang="pl" href="https://github.com/3en4all/PhishingInspector/releases/download/v0.2.0-beta/PhishingInspector-0.2.0-beta-windows-x64.zip" class="px-5 py-3 rounded-xl bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition">Pobierz PL</a>
+<a data-lang="en" href="https://github.com/3en4all/PhishingInspector/releases/download/v0.2.0-beta/PhishingInspector-0.2.0-beta-EN-windows-x64.zip" class="px-5 py-3 rounded-xl bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition">Download EN</a>
+<a href="https://github.com/3en4all/PhishingInspector/releases/tag/v0.2.0-beta" class="px-5 py-3 rounded-xl border border-[#30363d] text-cyan-300 hover:border-cyan-400/60 transition"><span data-lang="pl">Wszystkie pliki wydania</span><span data-lang="en">All release files</span></a>
+<a href="https://github.com/3en4all/PhishingInspector" class="px-5 py-3 rounded-xl border border-[#30363d] text-gray-300 hover:border-gray-500 transition"><span data-lang="pl">Zobacz na GitHub</span><span data-lang="en">View on GitHub</span></a>
+</div>
+<p data-lang="pl" class="mt-3 text-[11px] text-gray-500">Samodzielny build • Windows x64 • PL i EN • bez potrzeby osobnej instalacji Pythona</p>
+<p data-lang="en" class="mt-3 text-[11px] text-gray-500">Standalone build • Windows x64 • PL and EN • no separate Python installation required</p>
+</div>
+
+<div class="rounded-2xl border border-[#30363d] bg-[#0d1117] p-5 shadow-2xl shadow-black/20">
+<div data-lang="pl" class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Informacje o wydaniu</div><div data-lang="en" class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Release info</div>
+<dl class="space-y-3 text-sm">
+<div class="flex justify-between gap-4"><dt class="text-gray-500"><span data-lang="pl">Wersja</span><span data-lang="en">Version</span></dt><dd class="text-white">v0.2.0-beta</dd></div>
+<div class="flex justify-between gap-4"><dt class="text-gray-500"><span data-lang="pl">Platforma</span><span data-lang="en">Platform</span></dt><dd class="text-white">Windows x64</dd></div>
+<div class="flex justify-between gap-4"><dt class="text-gray-500"><span data-lang="pl">Języki</span><span data-lang="en">Languages</span></dt><dd class="text-white">Polish / English</dd></div>
+<div class="flex justify-between gap-4"><dt class="text-gray-500"><span data-lang="pl">Plik EXE</span><span data-lang="en">Executable</span></dt><dd class="text-white">~76 MB</dd></div>
+<div class="flex justify-between gap-4"><dt class="text-gray-500"><span data-lang="pl">Status</span><span data-lang="en">Status</span></dt><dd class="text-emerald-300"><span data-lang="pl">Publiczna beta</span><span data-lang="en">Public beta</span></dd></div>
+</dl></div>
+</section>
+
+<section class="grid md:grid-cols-3 gap-5">
+<article class="rounded-2xl border border-[#30363d] bg-[#0d1117] p-5"><h2 class="text-white font-bold"><span data-lang="pl">Sprawdź</span><span data-lang="en">Inspect</span></h2><p data-lang="pl" class="mt-2 text-sm text-gray-400">Analizuj podejrzane wiadomości, adresy URL i powiązaną zawartość w jednym interfejsie.</p><p data-lang="en" class="mt-2 text-sm text-gray-400">Review suspicious emails, URLs and related content from one desktop interface.</p></article>
+<article class="rounded-2xl border border-[#30363d] bg-[#0d1117] p-5"><h2 class="text-white font-bold"><span data-lang="pl">Analizuj</span><span data-lang="en">Analyze</span></h2><p data-lang="pl" class="mt-2 text-sm text-gray-400">Wyłapuj wskaźniki i kontekst pomagające ocenić, czy materiał wymaga głębszej weryfikacji.</p><p data-lang="en" class="mt-2 text-sm text-gray-400">Surface indicators and context that can help you decide whether something deserves deeper investigation.</p></article>
+<article class="rounded-2xl border border-[#30363d] bg-[#0d1117] p-5"><h2 class="text-white font-bold"><span data-lang="pl">Raportuj</span><span data-lang="en">Report</span></h2><p data-lang="pl" class="mt-2 text-sm text-gray-400">Generuj czytelny raport do zachowania, przeglądu lub przekazania dalej.</p><p data-lang="en" class="mt-2 text-sm text-gray-400">Generate a readable report that can be kept, reviewed or shared as part of a security workflow.</p></article>
+</section>
+
+<section class="rounded-2xl border border-cyan-500/20 bg-cyan-500/[0.035] p-6 sm:p-7">
+<h2 data-lang="pl" class="text-2xl font-bold text-white">Jak działa Phishing Inspector?</h2>
+<h2 data-lang="en" class="text-2xl font-bold text-white">How does Phishing Inspector work?</h2>
+<div data-lang="pl" class="mt-4 space-y-4 text-sm text-gray-400 leading-relaxed">
+<p>Phishing Inspector nie próbuje zastępować bramki pocztowej, programu antywirusowego ani analityka bezpieczeństwa. Jego zadaniem jest szybkie zebranie w jednym miejscu sygnałów, które podczas ręcznego sprawdzania podejrzanej wiadomości trzeba zwykle wyszukiwać osobno.</p>
+<p>Silnik analizuje wiadomości <span class="text-gray-200">.eml</span> oraz <span class="text-gray-200">.msg</span>. Sprawdza m.in. nagłówki i ścieżkę <span class="text-gray-200">Received</span>, wyniki SPF, DKIM i DMARC obecne w wiadomości, zgodność domen nadawcy, podejrzane lub podobne domeny, adresy URL oraz załączniki. Dla plików wyliczany jest również skrót SHA-256, dzięki czemu wynik może być wykorzystany w dalszej analizie.</p>
+<p>Poszczególne obserwacje są łączone w wynik ryzyka <span class="text-emerald-300">SAFE</span>, <span class="text-amber-300">SUSPICIOUS</span> lub <span class="text-rose-300">DANGEROUS</span>. To klasyfikacja heurystyczna — wynik ma wskazać, które elementy wymagają uwagi, a nie udawać bezwzględnego werdyktu „phishing / nie phishing”. Raport wyjaśnia również prostym językiem, dlaczego dany sygnał podnosi lub obniża ocenę ryzyka.</p>
+</div>
+<div data-lang="en" class="mt-4 space-y-4 text-sm text-gray-400 leading-relaxed">
+<p>Phishing Inspector is not intended to replace an email gateway, antivirus product or security analyst. Its purpose is to collect in one place the signals that normally need to be checked separately when reviewing a suspicious message.</p>
+<p>The engine analyzes <span class="text-gray-200">.eml</span> and <span class="text-gray-200">.msg</span> messages. It inspects headers and the <span class="text-gray-200">Received</span> chain, SPF, DKIM and DMARC results present in the message, sender-domain alignment, suspicious or lookalike domains, URLs and attachments. SHA-256 hashes are also calculated for files so the result can be used in further analysis.</p>
+<p>Individual observations are combined into a risk result: <span class="text-emerald-300">SAFE</span>, <span class="text-amber-300">SUSPICIOUS</span> or <span class="text-rose-300">DANGEROUS</span>. This is a heuristic classification: it highlights what deserves attention rather than pretending to provide an absolute “phishing / not phishing” verdict. Reports also explain in plain language why a signal raises or lowers the risk score.</p>
+</div>
+
+<div class="mt-7 grid md:grid-cols-2 gap-5">
+<div class="rounded-xl border border-[#30363d] bg-[#0a0f1d]/70 p-5">
+<div class="text-[10px] uppercase tracking-[0.18em] text-cyan-400 mb-2"><span data-lang="pl">Testy i kalibracja</span><span data-lang="en">Testing & calibration</span></div>
+<p data-lang="pl" class="text-sm text-gray-400 leading-relaxed">Przed publikacją ten sam produkcyjny silnik analizy został uruchomiony na zbiorze <span class="text-white font-semibold">6 691 wiadomości e-mail</span>. Benchmark służył do obserwowania zachowania klasyfikacji na dużej próbce i do strojenia reguł tak, aby pojedynczy słaby sygnał nie powodował automatycznie alarmu. Nie jest to deklaracja „99,9% skuteczności” — zbiór testowy pomagał kalibrować zachowanie programu, ale nie reprezentuje każdego możliwego scenariusza phishingowego.</p>
+<p data-lang="en" class="text-sm text-gray-400 leading-relaxed">Before publication, the same production analysis engine was run against a dataset of <span class="text-white font-semibold">6,691 email messages</span>. The benchmark was used to observe classification behavior at scale and tune rules so that a single weak signal would not automatically trigger an alarm. This is not a claim of “99.9% accuracy” — the dataset helped calibrate the application, but it cannot represent every possible phishing scenario.</p>
+</div>
+<div class="rounded-xl border border-[#30363d] bg-[#0a0f1d]/70 p-5">
+<div class="text-[10px] uppercase tracking-[0.18em] text-emerald-400 mb-2"><span data-lang="pl">Po co taki model?</span><span data-lang="en">Why this approach?</span></div>
+<p data-lang="pl" class="text-sm text-gray-400 leading-relaxed">Phishing rzadko daje się wiarygodnie rozpoznać po jednym elemencie. Legalna wiadomość może mieć nietypową trasę, a złośliwa może poprawnie przejść część kontroli uwierzytelniania. Dlatego program zestawia wiele niezależnych sygnałów i pokazuje ich kontekst. Użytkownik dostaje materiał do decyzji, a nie czarną skrzynkę z jednym procentem ryzyka.</p>
+<p data-lang="en" class="text-sm text-gray-400 leading-relaxed">Phishing rarely reveals itself through one reliable indicator. A legitimate message can have an unusual delivery path, while a malicious one may still pass some authentication checks. The application therefore combines multiple independent signals and shows their context. The user gets evidence for a decision rather than a black box returning a single risk percentage.</p>
+</div>
+</div>
+
+<div class="mt-6 rounded-xl border border-amber-500/20 bg-amber-500/5 p-4">
+<p data-lang="pl" class="text-xs text-gray-400 leading-relaxed"><span class="text-amber-200 font-semibold">Ważne:</span> wynik programu jest pomocą analityczną. Szczególnie w przypadku wiadomości dotyczących logowania, płatności, resetu hasła lub poufnych danych warto nadal potwierdzić żądanie niezależnym kanałem.</p>
+<p data-lang="en" class="text-xs text-gray-400 leading-relaxed"><span class="text-amber-200 font-semibold">Important:</span> the result is analytical support, not a guarantee. Messages involving login, payments, password resets or sensitive data should still be verified through an independent channel.</p>
+</div>
+</section>
+
+<section class="rounded-2xl border border-[#30363d] bg-[#0d1117] p-6">
+<h2 data-lang="pl" class="text-2xl font-bold text-white">Dlaczego plik ma około 76 MB?</h2><h2 data-lang="en" class="text-2xl font-bold text-white">Why is the download around 76 MB?</h2>
+<p data-lang="pl" class="mt-3 text-sm text-gray-400">Program jest dystrybuowany jako samodzielny pakiet Windows. Zawiera aplikację oraz komponenty potrzebne do uruchomienia bez osobnej instalacji Pythona.</p><p data-lang="en" class="mt-3 text-sm text-gray-400">The Windows executable is distributed as a standalone package. It includes the application plus the components required to run it without installing Python separately.</p>
+<ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-300">
+<li>• Python runtime</li><li>• PySide6 / Qt GUI</li><li>• <span data-lang="pl">Parsery e-mail i HTML</span><span data-lang="en">Email and HTML parsing components</span></li><li>• <span data-lang="pl">Generowanie raportów PDF</span><span data-lang="en">PDF report generation components</span></li><li>• <span data-lang="pl">Obsługa archiwów i formatów plików</span><span data-lang="en">Archive and file-format handling libraries</span></li><li>• <span data-lang="pl">Biblioteki sieciowe i bezpieczeństwa</span><span data-lang="en">Networking and security-related dependencies</span></li>
+</ul></section>
+
+<section class="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6"><h2 class="text-xl font-bold text-amber-200"><span data-lang="pl">Informacja o wersji beta</span><span data-lang="en">Beta notice</span></h2><p data-lang="pl" class="mt-2 text-sm text-gray-400">To wczesna publiczna beta. Logika detekcji, elementy interfejsu i obsługiwane scenariusze mogą jeszcze ulec zmianie przed stabilnym wydaniem.</p><p data-lang="en" class="mt-2 text-sm text-gray-400">This is an early public beta. Detection logic, UI details and supported workflows may still change before a stable release.</p></section>
+
+<section class="rounded-2xl border border-[#30363d] bg-[#0d1117] p-6">
+<h2 class="text-xl font-bold text-white"><span data-lang="pl">Integralność plików</span><span data-lang="en">File integrity</span></h2>
+<div class="mt-4 space-y-5">
+<div>
+<p class="text-sm text-gray-300"><span data-lang="pl">Wersja polska</span><span data-lang="en">Polish build</span></p>
+<p class="mt-1 text-xs text-gray-500">PhishingInspector-0.2.0-beta-windows-x64.zip</p>
+<code class="mt-2 block break-all text-xs text-emerald-300">BC4D25FAEC3776A4887A706B174473571CC3A6009F0D1207DFF4ACCB4BBC6B01</code>
+</div>
+<div>
+<p class="text-sm text-gray-300"><span data-lang="pl">Wersja angielska</span><span data-lang="en">English build</span></p>
+<p class="mt-1 text-xs text-gray-500">PhishingInspector-0.2.0-beta-EN-windows-x64.zip</p>
+<code class="mt-2 block break-all text-xs text-cyan-300">71C55E708838FB668588B1132F2CFC6F3E759EDF83D3AD43EB4D78EF0CB8D5AA</code>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-[#30363d] py-6 text-center text-xs text-gray-600">TechM8 // 3en4all</footer>
+<script>
+function setLanguage(lang){const l=lang==='en'?'en':'pl';document.documentElement.setAttribute('data-language',l);document.documentElement.lang=l;localStorage.setItem('techm8-language',l);const pl=document.getElementById('lang-pl'),en=document.getElementById('lang-en');pl.className='px-2 py-1 rounded-md '+(l==='pl'?'text-emerald-300 bg-emerald-500/10':'text-gray-500 hover:text-cyan-300');en.className='px-2 py-1 rounded-md '+(l==='en'?'text-emerald-300 bg-emerald-500/10':'text-gray-500 hover:text-cyan-300')}
+setLanguage(localStorage.getItem('techm8-language')||'pl');
+</script>
+</body></html>
